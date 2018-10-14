@@ -1,0 +1,228 @@
+/**
+* Théme MineWeb Pluton par Tronai
+* Ce CSS ne peut étre utiliser seulement si le théme a été acheté sur le market de MineWeb.org
+*/
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans|PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+html{height: 100%; width: 100%; margin: 0;}
+li{list-style-type: none;}
+body{margin: 0; padding: 0;height: 100%; background-color:#efefef; font-family: Montserrat;}
+
+a:hover{text-decoration: none; color:grey;}
+a{
+  color:grey;
+ 	-webkit-transition-duration: 0.3s;
+  -moz-transition-property: color;
+ 	-moz-transition-duration: 0.3s;
+ 	transition-property: color;
+ 	transition-duration: 0.3s;
+}
+
+
+/* Classe predef */
+
+.white{color:white;}
+.black{color:black;}
+.grey{color:grey;}
+
+.hwhite:hover{color:white;}
+.hblack:hover{color:black;}
+
+.montserrat{
+  font-family: 'Montserrat', sans-serif;
+}
+
+/**----------------------------------------------
+ ---------------------FOOTER----------------------
+ ------------------------------------------------*/
+footer{
+  background-color: #292828;
+  width: 100%;
+  color:black;
+  font-family: 'PT Sans', sans-serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/** Twitter */
+.twitter{
+  border-right: grey solid 1.4px;
+  padding-right: 10px;
+  color:grey;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  transition: 0.3s linear;
+}
+
+.twitter:hover{
+  color:#2B8BF1;
+}
+
+/** FB */
+
+.fb{
+  border-right: grey solid 1.4px;
+  padding-right: 10px;
+  padding-left: 8px;
+  color:grey;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  transition: 0.3s linear;
+}
+
+.fb:hover{
+  color:#3b5998;
+}
+
+/** YT */
+
+.yt{
+  padding-left: 10px;
+  color:grey;
+  transition: 0.3s linear;
+}
+
+.yt:hover{
+  color:#d71e17;
+}
+
+
+
+/**----------------------------------------------
+ ---------------------TOP-------------------------
+ ------------------------------------------------*/
+.ju-top{
+  background-color:#393737;
+  color:white;
+  height: 50px;
+}
+
+.ju-top ul li{
+  display: inline-block;
+}
+
+@media screen and (min-width: 200px) and (max-width: 640px){.top, .carousel{display: none;}}
+
+.ju-top-stat{
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: #292828;
+  padding-left: 30px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height: 100%;
+  color:white;
+  float: left;
+}
+
+
+
+.ju-top-inc{
+  margin-left: -4px;
+  padding-right: 10px;
+}
+
+.ju-top-m{
+  margin-top: 15px;
+  float:right;
+}
+
+/**----------------------------------------------
+ ---------------------Menu-------------------------
+ ------------------------------------------------*/
+
+ .navbar, .menu{
+   background-color: #27272a;
+   border:0;
+   padding: 0;
+   font-family: 'Droid Sans';
+   margin:0;
+ }
+ #navbar{
+   margin-top: 10px;
+   margin-right: 20%;
+    text-transform: uppercase;
+ }
+ .navbar-header .h2, .navbar-header .h2:hover{
+   font-size: 200%;
+   padding: 0;
+   margin-top: 20px;
+   padding-bottom: 0px;
+   color:white;
+ }
+
+.ju-menu-bg:active, .ju-menu-bg:focus, .ju-menu-bg:hover {
+  background-color: #27272a;
+}
+
+#menu-dropdown{
+  background-color: #25262e;
+}
+
+/**-----------------------------------------------------
+-------------------------Home---------------------------
+------------------------------------------------------ */
+
+.ju-carousel-left{
+  margin-top: 250px;
+  padding-top: 11px;
+  padding-bottom: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
+  transition: ease 2s;
+}
+
+.ju-carousel-left:hover{
+  background-color: #27272a;
+  transform: rotate(360deg);
+}
+
+.ju-carousel-right{
+  margin-top: 250px;
+  padding-top: 11px;
+  padding-bottom: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
+  transition: ease 1s;
+}
+
+.ju-carousel-right:hover{
+  background-color: #27272a;
+  transform: rotate(360deg);
+}
+
+.ju-home-pre i{
+  text-align: center;
+  z-index: 1;
+}
+
+.ju-home-fa{
+  color: white;
+  background-color: #27272a;
+  padding-left: 11%;
+  padding-right: 11%;
+  padding-top:10%;
+  padding-bottom: 10%;
+  border-radius: 50%;
+  margin-left: 31%;
+}
+
+.col-lg-4 h4, .col-lg-4 p{
+  text-align: center;
+}
+
+/* HRC */
+
+hr.hrc {
+	border-top: 3px solid black;
+  width: 80%;
+}
+
+hr.hrc2{
+  width: 60%;
+  border-top: 3px solid black;
+  margin-top: -10px;
+  z-index: 1;
+}

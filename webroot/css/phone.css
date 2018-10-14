@@ -1,0 +1,41 @@
+/** Menu */
+
+@media screen and (min-width: 200px) and (max-width: 640px){
+  .ju-top{
+    display: none;
+    }
+  }
+
+
+  @media (min-width: 1200px) {.ggt{margin-left: 500%; padding-top: 20px;}}
+
+/** Carousel */
+
+@media screen and (min-width: 200px) and (max-width: 640px){
+  .carousel{
+    display: none;
+    }
+  }
+
+/** Home Informations */
+
+@media screen and (min-width: 200px) and (max-width: 640px){
+  .hrc, .hrc2{
+    display: none;
+    }
+
+  .hrc3{
+    text-align: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  h2.hrc3{
+    background-color: #efefef;
+    text-align: center;
+    margin-top: -45px;
+    margin-left: 460px;
+    z-index: 2;
+    width: 20%;
+  }
+ }

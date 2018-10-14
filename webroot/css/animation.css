@@ -1,0 +1,29 @@
+/** Annimation Slider */
+
+.rotatex{
+  transform:rotateX(0deg);
+  animation-name: text;
+  animation-duration:2s;
+}
+
+@keyframes text {
+    from {transform:rotateX(180deg);}
+    to {transform:rotateX(0deg);}
+}
+
+@keyframes title {
+    from {transform:rotateZ(3deg);}
+    10%{transform:rotateZ(3deg);}
+    20%{transform:rotateZ(0deg);}
+    30%{transform:rotateZ(3deg);}
+    40%{transform:rotateZ(0deg);}
+    50%{transform:rotateZ(2deg);}
+    60%{transform:rotateZ(0deg);}
+    70%{transform:rotateZ(1deg);}
+    to {transform:rotateZ(0deg);}
+}
+
+@keyframes hr {
+  from{width: 10%;}
+  to{width: 80%;}
+}
