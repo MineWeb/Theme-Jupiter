@@ -130,7 +130,7 @@
   </div>
   <?php } ?>
 
-  <?php if($EyPlugin->isInstalled('eywek.shop.1')) { ?>
+  <?php if($EyPlugin->isInstalled('eywek.shop')) { ?>
 
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -235,43 +235,43 @@
             </div>
             <div class="panel-body" style="padding: 30px 20px;">
               <p class="lead" style="font-size:18px;">
-        <?= $Lang->get('API__MINEGUARD_EXPLAIN') ?>
-      </p>
+                <?= $Lang->get('API__MINEGUARD_EXPLAIN') ?>
+              </p>
 
-      <div class="row">
-        <div class="col-md-8">
-          <table class="table">
-            <thead>
-              <tr>
-                <th><?= $Lang->get('IP') ?></th>
-                <th><?= $Lang->get('GLOBAL__ACTIONS') ?></th>
-              </tr>
-            </thead>
-            <tbody id="table-ip">
-              <?php
-              foreach ($api as $key => $value) { ?>
-                <tr id="<?= $key ?>">
-                  <th><?= $value ?></th>
-                  <th><button data-ip-id="<?= $key ?>" class="btn btn-danger delete_ip"><?= $Lang->get('GLOBAL__DELETE') ?></button></th>
-                </tr>
-              <?php } ?>
-            </tbody>
+              <div class="row">
+                <div class="col-md-8">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th><?= $Lang->get('IP') ?></th>
+                        <th><?= $Lang->get('GLOBAL__ACTIONS') ?></th>
+                      </tr>
+                    </thead>
+                    <tbody id="table-ip">
+                      <?php
+                      foreach ($api as $key => $value) { ?>
+                        <tr id="<?= $key ?>">
+                          <th><?= $value ?></th>
+                          <th><button data-ip-id="<?= $key ?>" class="btn btn-danger delete_ip"><?= $Lang->get('GLOBAL__DELETE') ?></button></th>
+                        </tr>
+                      <?php } ?>
+                    </tbody>
 
-          </table>
-        </div>
+                  </table>
+                </div>
 
-        <div class="col-md-4">
-          <form method="post" data-ajax="true" action="<?= $this->Html->url(array('controller' => 'api', 'action' => 'add_ip')) ?>" data-callback-function="addIP">
-            <div class="form-group">
-              <input type="text" class="form-control" name="ip" placeholder="<?= $Lang->get('IP') ?>">
-            </div>
+                <div class="col-md-4">
+                  <form method="post" data-ajax="true" action="<?= $this->Html->url(array('controller' => 'api', 'action' => 'add_ip')) ?>" data-callback-function="addIP">
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="ip" placeholder="<?= $Lang->get('IP') ?>">
+                    </div>
 
-            <div class="form-group">
-              <button type="submit" class="btn btn-success"><?= $Lang->get('GLOBAL__ADD') ?></button>
-            </div>
-          </form>
-        </div>
-      </div>
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-success"><?= $Lang->get('GLOBAL__ADD') ?></button>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -281,5 +281,36 @@
 
     </div>
   <?php } ?>
+<?php if($EyPlugin->isInstalled('eywek.shop')) { ?>
+			<div class="box clearfix no-mb">
+				<div class="panel panel-default">
+					<div class="panel-heading"><h3 class="panel-title"><?= $Lang->get('SHOP__HISTORY_PURCHASES') ?></h3>
+					</div>
+					<div style="margin-bottom: -2rem;">
+						<table class="table table-bordered" id="users">
+							<thead>
+							<tr>
+								<th><?= $Lang->get('DASHBOARD__PURCHASES') ?> ID</th>
+								<th><?= $Lang->get('GLOBAL__CREATED') ?></th>
+								<th><?= $Lang->get('SHOP__ITEM_PRICE') ?></th>
+								<th class="right"><?= $Lang->get('SHOP__ITEMS') ?></th>
+							</tr>
+							</thead>
+							<tbody>
+							<?php
+						foreach ($histories as $value) { ?>
+							<tr>
+								<td><?= $value["ItemsBuyHistory"]["id"] ?></td>
+								<td><?= $value["ItemsBuyHistory"]["created"] ?></td>
+								<td><?= $value["Item"]["price"] ?></td>
+								<td><?= $value["Item"]["name"] ?></td>
+							</tr>
+							<?php } ?>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<?php } ?>
     <?= $Module->loadModules('user_profile') ?>
 </div>
