@@ -79,14 +79,12 @@ footer{
 /** YT */
 
 .yt{
-  padding-left: 10px;
-  color:grey;
-  transition: 0.3s linear;
+  border-right: grey solid 1.4px;  padding-right: 10px;  padding-left: 8px;  color:grey;  padding-top: 3px;  padding-bottom: 3px;  transition: 0.3s linear;
 }
 
 .yt:hover{
   color:#d71e17;
-}
+}.skype{  padding-left: 10px;  color:grey;  transition: 0.3s linear;}.skype:hover{  color:#2B8BF1;}
 
 
 

@@ -21,6 +21,10 @@
       if(!empty($youtube_link)){
       ?>
       <a href="<?= $youtube_link ?>" class="yt"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+      <?php } 
+	  if(!empty($skype_link)){
+      ?>
+      <a href="<?= $skype_link ?>" class="skype"><i class="fa fa-skype" aria-hidden="true"></i></a>
       <?php } ?>
     </div>
     </div>

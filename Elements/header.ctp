@@ -27,11 +27,21 @@
                       foreach ($nav as $key => $value) { ?>
                         <?php if(empty($value['Navbar']['submenu'])) { ?>
                           <li class="li-nav">
-                              <a href="<?= $value['Navbar']['url'] ?>"><span class="white hcolor" style="transition: 0.3s linear;"><?= $value['Navbar']['name'] ?></span></a>
+                              <a href="<?= $value['Navbar']['url'] ?>"><span class="white hcolor" style="transition: 0.3s linear;">
+							  <?php if(!empty($value['Navbar']['icon'])): ?>
+								<i class="fa fa-<?= $value['Navbar']['icon'] ?>"></i>
+							  <?php endif; ?>
+							  <?= $value['Navbar']['name'] ?>
+							  </span></a>
                           </li>
                         <?php } else { ?>
                           <li class="dropdown">
-                            <a id="menu-dropdown" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="white hcolor"><?= $value['Navbar']['name'] ?> <span class="caret"></span></span></a>
+                            <a id="menu-dropdown" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="white hcolor">
+							<?php if(!empty($value['Navbar']['icon'])): ?>
+								<i class="fa fa-<?= $value['Navbar']['icon'] ?>"></i>
+							<?php endif; ?>
+							<?= $value['Navbar']['name'] ?> 
+							<span class="caret"></span></span></a>
                             <ul class="dropdown-menu" role="menu">
                             <?php
                             $submenu = json_decode($value['Navbar']['submenu']);
@@ -50,8 +60,13 @@
                         <a href="#" class="ju-menu-bg" id="menu-dropdown" data-toggle="dropdown" role="button" aria-expanded="false"><span class="white hcolor ju-menu-bg" style="transition: 0.3s linear;">Membre <span class="caret"></span></span></a>
                         <ul class="dropdown-menu" role="menu">
                           <?php if(!$isConnected){ ?>
-                              <li><a href="#login">Connexion</a></li>
-                              <li><a href="#register">Inscription</a></li>
+								<?php if($EyPlugin->isInstalled('phpierre.signinup')) { ?>
+									<li><a href="/login">Connexion</a></li>
+									<li><a href="/register">Inscription</a></li>
+								<?php } else { ?>
+									<li><a href="#login">Connexion</a></li>
+									<li><a href="#register">Inscription</a></li>
+								<?php } ?>
                           <?php }else{ ?>
                             <li><a href="<?= $this->Html->url(array('controller' => 'profile', 'action' => 'index', 'plugin' => false)); ?>"><?= $Lang->get('USER__PROFILE'); ?></a></li>
                             <li><a href="#notifications_modal" onclick="notification.markAllAsSeen(2)"><span class="notification-indicator"></span>Notification</a></li>

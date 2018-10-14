@@ -12,7 +12,6 @@
     <!-- Bootstrap & FA -->
     <?= $this->Html->css('bootstrap.min.css'); ?>
     <?= $this->Html->css('font-awesome.min.css'); ?>
-    <?= $this->Html->css('../font-awesome-4.1.0/css/font-awesome.min.css'); ?>
 
     <!-- Autre -->
     <?= $this->Html->css('modern-businesss.css') ?>
@@ -26,7 +25,7 @@
     <?= $this->Html->css('phone.css'); ?>
 
 
-    <link rel="icon" type="image/png" href="<?= $theme_config['favicon_url'] ?>" />
+    <link rel="icon" type="image/png" href="<?= (isset($theme_config) && isset($theme_config['favicon_url'])) ? $theme_config['favicon_url'] : '' ?>" />
   </head>
   <body>
     <?= $this->element('css'); ?>
@@ -70,8 +69,6 @@
     <?= $this->Html->script('form.js') ?>
     <?= $this->Html->script('notification.js') ?>
     <?= $this->Html->script('easy_paginate.js'); ?>
-    <?= $this->Html->script('bootstrap-carousel.js'); ?>
-    <?= $this->Html->script('particles.js'); ?>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/unslider/2.0.3/js/unslider-min.js"></script>

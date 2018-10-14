@@ -1,4 +1,0 @@
-#- equilibrer les achievements sur le home.
-#- revoir adaptation plugin donation
-#- Popup qui s'ouvre au chargement de la page
-#- dropdown background

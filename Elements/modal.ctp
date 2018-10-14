@@ -105,6 +105,16 @@
               </div>
             </div>
           <?php } ?>
+		  <?php if (!empty($condition)) { ?>
+		  <div class="form-group">
+			<div class="col-sm-10 checkbox">
+				<label>
+					<input type="checkbox" name="condition">
+					<?=$Lang->get('USER__CONDITION_1')?> <a href="<?= $condition ?>"> <?= $Lang->get('USER__CONDITION_2')?></a>
+				</label>
+			</div>
+		  </div>
+		 <?php } ?>
       </div>
       <div class="modal-footer border-t">
         <a class="btn btn-danger" data-dismiss="modal" href="#close"><?= $Lang->get('GLOBAL__CLOSE') ?></a>
