@@ -40,7 +40,7 @@
       <div class="container">
         <!-- IL EST INTERDIT DE RETIRER LES LIENS ET CREDITS SOUS PEINE DE BLOQUAGE DE LA LICENSE ! -->
         <div class="row">
-      <div class="col-lg-10"><?php if(!empty($theme_config['footer-text'])){ echo $theme_config['footer-text']." |"; } ?> Propulsé par <a href="http://mineweb.org/" class="hcolor">Mineweb</a> | Thème <a class="hcolor" href="https://mineweb.org/market/theme/Jupiter">Jupiter</a> par <a href="https://twitter.com/Tronaidev" class="hcolor">Tronai</a>.</div>
+      <div class="col-lg-10"><?php if(!empty($theme_config['footer-text'])){ echo $theme_config['footer-text']." |"; } ?> Propulsé par <a href="http://mineweb.org/" class="hcolor">Mineweb</a> | Thème <a class="hcolor" href="/">Jupiter</a> par <a href="https://twitter.com/Tronaidev" class="hcolor">Tronai</a>.</div>
         <div class="col-lg-2">
           <?php if(!empty($twitter_link)){ ?>
           <a href="<?= $twitter_link ?>" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -52,8 +52,13 @@
           if(!empty($youtube_link)){
           ?>
           <a href="<?= $youtube_link ?>" class="yt"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-          <?php } ?></div>
-          <br>
+          <?php } 
+          if(!empty($skype_link)){
+          ?>
+          <a href="<?= $skype_link ?>" class="skype"><i class="fa fa-skype" aria-hidden="true"></i></a>
+          <?php } ?>
+        </div>
+        <br>
       </div>
         </div>
     </footer>

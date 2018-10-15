@@ -2,7 +2,7 @@
     "name": "Jupiter",
     "slug": "Jupiter",
     "author": "Tronai",
-    "version": "2.2.0",
+    "version": "2.2.2",
     "apiID": 0,
     "configurations": {
         "color": "#dc4f4f",
