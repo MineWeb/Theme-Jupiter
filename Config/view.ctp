@@ -79,13 +79,6 @@ $inf = json_decode($json, true);
                        <input type="text" class="form-control" name="ip" value="<?= $theme_config['ip'] ?>"></td>
                      </td>
                    </tr>
-				   <tr>
-                     <td>Favicon</td>
-                     <td><i>Par default : #</i></td>
-                     <td>
-                       <input type="text" class="form-control" name="favicon_url" value="<?= $theme_config['favicon_url'] ?>"></td>
-                     </td>
-                   </tr>
                  </table>
                </div>
             </div>
