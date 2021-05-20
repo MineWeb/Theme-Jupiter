@@ -5,11 +5,11 @@ $inf = json_decode($json, true);
 <section class="content">
 
   <?php if($inf != ""){ ?>
-  <div class="box box-warning">
-    <div class="box-header with-border">
-      <h3 class="box-title"><?= $inf['title'] ?></h3>
+  <div class="card card-warning">
+    <div class="card-header with-border">
+      <h3 class="card-title"><?= $inf['title'] ?></h3>
     </div>
-    <div class="box-body">
+    <div class="card-body">
       <?= $inf['contenue'] ?>
     </div>
   </div>
@@ -19,20 +19,20 @@ $inf = json_decode($json, true);
 
   <div class="row">
     <div class="col-md-12">
-      <div class="box">
-        <div class="box-header with-border">
-          <h3 class="box-title"><?= $Lang->get('THEME__CUSTOMIZATION') ?></h3><span class="pull-right">Tronai</span>
+      <div class="card">
+        <div class="card-header with-border">
+          <h3 class="card-title"><?= $Lang->get('THEME__CUSTOMIZATION') ?></h3><span class="pull-right">Tronai</span>
         </div>
-        <div class="box-body">
+        <div class="card-body">
 
 
 
           <div class="tabbable">
             <ul class="nav nav-tabs">
-             <li class="active"><a href="#tab1" data-toggle="tab">Option General</a></li>
-             <li><a href="#tab2" data-toggle="tab">Maintenance</a></li>
-             <li><a href="#tab3" data-toggle="tab">Menu</a></li>
-             <li><a href="#tab4" data-toggle="tab">Home</a></li>
+             <li class="active"><a href="#tab1" class="nav-link text-dark" data-toggle="tab">Option General</a></li>
+             <li><a href="#tab2" class="nav-link text-dark" data-toggle="tab">Maintenance</a></li>
+             <li><a href="#tab3" class="nav-link text-dark" data-toggle="tab">Menu</a></li>
+             <li><a href="#tab4" class="nav-link text-dark" data-toggle="tab">Home</a></li>
              </ul>
              <form method="post" enctype="multipart/form-data" data-ajax="false">
           <div class="tab-content">
@@ -77,13 +77,6 @@ $inf = json_decode($json, true);
                      <td><i>Par default : 127.0.0.1</i></td>
                      <td>
                        <input type="text" class="form-control" name="ip" value="<?= $theme_config['ip'] ?>"></td>
-                     </td>
-                   </tr>
-				   <tr>
-                     <td>Favicon</td>
-                     <td><i>Par default : #</i></td>
-                     <td>
-                       <input type="text" class="form-control" name="favicon_url" value="<?= $theme_config['favicon_url'] ?>"></td>
                      </td>
                    </tr>
                  </table>
